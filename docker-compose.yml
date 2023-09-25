@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  user:
+    image: user
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000
+
+      
+  #   depends_on:
+  #     - docker_host
+      
+  # docker_host:
+  #   image: docker_host
+  #   build: ./mysql
+  #   restart: always
+  #   ports:
+  #     - 3306:3306
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=root
+  #     - MYSQL_DATABASE=microservices_database
+  #     - MYSQL_USER=new
+  #     - MYSQL_PASSWORD=root
